@@ -7,6 +7,20 @@ import ProductCard from "@/components/ProductCard";
 import { Star, Heart, Minus, Plus, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
 
+const WishlistButton = ({ productId }: { productId: string }) => {
+  const { toggleItem, isInWishlist } = useWishlist();
+  const wishlisted = isInWishlist(productId);
+  return (
+    <button
+      onClick={() => { toggleItem(productId); toast.success(wishlisted ? "Removed from wishlist" : "Added to wishlist"); }}
+      className={`p-3 border transition-colors ${wishlisted ? "bg-primary text-primary-foreground border-primary" : "border-border hover:bg-secondary"}`}
+      aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
+    >
+      <Heart className={`h-5 w-5 ${wishlisted ? "fill-current" : ""}`} />
+    </button>
+  );
+};
+
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
