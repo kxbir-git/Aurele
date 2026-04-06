@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { products } from "@/data/products";
 import { useCart } from "@/contexts/CartContext";
+import { useWishlist } from "@/contexts/WishlistContext";
 import ProductCard from "@/components/ProductCard";
 import { Star, Heart, Minus, Plus, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
@@ -118,9 +119,7 @@ const ProductDetail = () => {
             <button onClick={handleAddToCart} className="flex-1 bg-primary text-primary-foreground py-3 text-sm font-medium tracking-wider uppercase hover:opacity-90 transition-opacity">
               Add to Cart
             </button>
-            <button className="p-3 border border-border hover:bg-secondary transition-colors" aria-label="Add to wishlist">
-              <Heart className="h-5 w-5" />
-            </button>
+            <WishlistButton productId={product.id} />
           </div>
         </div>
       </div>
