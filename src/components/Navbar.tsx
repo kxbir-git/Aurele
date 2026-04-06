@@ -31,8 +31,13 @@ const Navbar = () => {
           <Link to="/shop" aria-label="Search">
             <Search className="h-5 w-5 hover:text-muted-foreground transition-colors" />
           </Link>
-          <Link to="/shop" aria-label="Wishlist">
+          <Link to="/wishlist" className="relative" aria-label="Wishlist">
             <Heart className="h-5 w-5 hover:text-muted-foreground transition-colors" />
+            {wishlistCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center font-medium">
+                {wishlistCount}
+              </span>
+            )}
           </Link>
           <Link to="/cart" className="relative" aria-label="Cart">
             <ShoppingBag className="h-5 w-5 hover:text-muted-foreground transition-colors" />
