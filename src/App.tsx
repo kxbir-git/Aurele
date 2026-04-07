@@ -15,6 +15,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Wishlist from "./pages/Wishlist";
 import NotFound from "./pages/NotFound";
+import AdminLayout from "./components/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import AdminProducts from "./pages/admin/Products";
+import AdminOrders from "./pages/admin/Orders";
 
 const queryClient = new QueryClient();
 
@@ -26,18 +30,17 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Navbar />
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="*" element={<NotFound />} />
+            {/* Admin routes – no Navbar/Footer */}
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="products" element={<AdminProducts />} />
+              <Route path="orders" element={<AdminOrders />} />
+            </Route>
+
+            {/* Storefront */}
+            <Route path="*" element={<><Navbar /><Routes><Route path="/" element={<Index />} /><Route path="/shop" element={<Shop />} /><Route path="/product/:id" element={<ProductDetail />} /><Route path="/cart" element={<Cart />} /><Route path="/about" element={<About />} /><Route path="/contact" element={<Contact />} /><Route path="/wishlist" element={<Wishlist />} /><Route path="*" element={<NotFound />} /></Routes><Footer /></>} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </WishlistProvider>
       </CartProvider>
