@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-collection.jpg";
 const About = () => (
   <main>
     <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
-      <img src={heroImage} alt="About AURÈLE" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover" />
+      <img src={heroImage} alt="About ZURIEL SHATAB" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-foreground/40" />
       <div className="relative container mx-auto px-4 h-full flex items-center justify-center text-center">
         <h1 className="text-primary-foreground heading-display text-4xl md:text-6xl font-semibold">Our Story</h1>
