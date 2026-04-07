@@ -57,21 +57,21 @@ const Contact = () => {
               <MapPin className="h-5 w-5 mt-0.5 text-muted-foreground flex-shrink-0" />
               <div>
                 <h3 className="text-sm font-medium mb-1">Visit Us</h3>
-                <p className="text-sm text-muted-foreground">123 Fashion Avenue, New York, NY 10001</p>
+                <p className="text-sm text-muted-foreground">Afroz Appartment LKO.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Mail className="h-5 w-5 mt-0.5 text-muted-foreground flex-shrink-0" />
               <div>
                 <h3 className="text-sm font-medium mb-1">Email</h3>
-                <p className="text-sm text-muted-foreground">hello@aurele.com</p>
+                <p className="text-sm text-muted-foreground">Kxbir_o@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Phone className="h-5 w-5 mt-0.5 text-muted-foreground flex-shrink-0" />
               <div>
                 <h3 className="text-sm font-medium mb-1">Phone</h3>
-                <p className="text-sm text-muted-foreground">+1 (212) 555-0199</p>
+                <p className="text-sm text-muted-foreground">+1 (+91) 7376134786</p>
               </div>
             </div>
           </div>
