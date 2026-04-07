@@ -16,7 +16,7 @@ const AdminLayout = () => {
       {/* Sidebar */}
       <aside className="w-60 border-r border-border bg-card hidden md:flex flex-col">
         <div className="p-6 border-b border-border">
-          <h2 className="heading-display text-lg font-semibold">AURÈLE Admin</h2>
+          <h2 className="heading-display text-lg font-semibold">ZURIEL SHATAB Admin</h2>
         </div>
         <nav className="flex-1 p-4 space-y-1">
           {navItems.map((item) => (
